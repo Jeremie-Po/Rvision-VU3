@@ -13,9 +13,14 @@
         </div>
 
         <script type="module">
-          import app from './app.js'
+            import appButton from './js/components/appButton.js'
 
-          Vue.createApp(app).mount('#app')
+            let app = {
+                components: {
+                    'app-button': appButton
+                },
+            };
+            Vue.createApp(app).mount('#app');
         </script>
     </body>
 </html>
