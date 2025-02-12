@@ -1,51 +1,42 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Episode 2: Attribute Binding and Basic Events</title>
-    <script src="https://unpkg.com/vue@3"></script>
-    <style>
-        html, body {
-            height: 100%;
-        }
+<html class="h-full" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Episode 3: Lists and Computed Properties</title>
+        <script src="https://unpkg.com/vue@3"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
 
-        body {
-            display: grid;
-            place-items: center;
-        }
+    <body class="h-full grid place-items-center">
+        <div id="app">
+            <h2 class="font-bold"> Assignments</h2>
+            <ul>
+                <li v-for="assignment in assignments">
+                    <label>
+                        {{ assignment.name }} <input type="checkbox" v-model="assignment.complete">
+                    </label>
+                </li>
+            </ul>
 
-        .text-red {
-            color: red;
-        }
+            <pre>
+                {{ assignments}}
+            </pre>
+        </div>
 
-        .text-green {
-            color: green;
-        }
-    </style>
-</head>
+        <script>
+            let app = {
+                data() {
+                    return {
+                        assignments: [
+                            {name: 'Finish project', complete: false, id: 1},
+                            {name: 'Read Chapter 4', complete: true, id: 2},
+                            {name: 'Turn in Homework', complete: false, id: 3},
+                        ]
+                    }
+                },
+            };
 
-<body>
-    <div id="app">
-        <button
-                :class="active ? 'text-red' : 'text-green'"
-                @click="toggle"
-        >Click Me</button>
-    </div>
-
-    <script>
-        Vue.createApp({
-            data() {
-                return {
-                    active: false
-                };
-            },
-
-            methods: {
-                toggle() {
-                    this.active = ! this.active;
-                }
-            }
-        }).mount('#app');
-    </script>
-</body>
+            Vue.createApp(app).mount('#app');
+        </script>
+    </body>
 </html>
