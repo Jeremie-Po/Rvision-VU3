@@ -23,3 +23,7 @@ npx serve
 - loop over an object and v-bind a checkbox
 - computed basic and v-show section
 
+## first component in index
+
+- add custom component in the index file
+
