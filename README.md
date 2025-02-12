@@ -7,23 +7,11 @@ VUE-3 review https://laracasts.com/series/learn-vue-3-step-by-step/
 npx serve
 ```
 
-## Variable
+## Vue basics
+- variable declaration
+- setTimout
 
-```
-data() {
-        return {
-            greeting: 'What is up'
-        };
-    },
-```
+## attribute binding & event handeling
+- v-bind
+- V-on
 
-## timeout
-
-```
-
-            mounted() {
-                setTimeout(() => {
-                    this.greeting = 'Changed';
-                }, 3000);
-            }
-```
