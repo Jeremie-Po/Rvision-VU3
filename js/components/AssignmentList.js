@@ -9,7 +9,10 @@ export default {
                 ({{ assignments.length }})
                 </h2>
                 
-               <assignment-tags :assignments="assignments" @change="currentTag = $event" :currentTag="currentTag"/>
+               <assignment-tags 
+                   :assignments="assignments" 
+                   v-model:currentTag="currentTag"
+               />
                 
                 <ul class="border border-gray-600 divide-y divide-gray-600 mt-3">
                     <assignment :key="assignment.id" v-for="assignment in filteredAssignments" :assignment="assignment"></assignment>
