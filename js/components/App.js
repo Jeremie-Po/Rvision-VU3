@@ -2,7 +2,7 @@ import Assignments from './Assignments.js'
 
 export default {
   template: `
-  <Assignments></Assignments>
+      <Assignments></Assignments>
 `,
   components: {
     Assignments
