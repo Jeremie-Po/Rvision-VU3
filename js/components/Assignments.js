@@ -12,7 +12,7 @@ export default {
                 <assignment-create @add="add"></assignment-create>  
             </assignment-list>           
             
-            <assignment-list title="In completed Component" :assignments="filters.completed"></assignment-list>           
+            <assignment-list title="In completed Component" :assignments="filters.completed" canToggle></assignment-list>           
         </section>
 `,
 
