@@ -8,22 +8,19 @@ VUE-3 review https://laracasts.com/series/learn-vue-3-step-by-step/
 npx serve
 ```
 
-## Vue basics
+## create a fake API json server
 
-- variable declaration
-- setTimout
+- install json-server
 
-## attribute binding & event handeling
+```
+npm install json-server --save-dev
+```
 
-- v-bind
-- V-on
+- create a db.json file
 
-## List Conditionnal Computed
+- run the server
 
-- loop over an object and v-bind a checkbox
-- computed basic and v-show section
-
-## first component in index
-
-- add custom component in the index file
+```
+npx json-server db.json -p 3001
+```
 
