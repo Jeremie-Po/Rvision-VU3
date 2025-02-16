@@ -10,15 +10,18 @@ export default {
         <section class="flex gap-8">
             <assignment-list title="In Progress Component" :assignments="filters.inProgress">
                 <assignment-create @add="add"></assignment-create>  
-            </assignment-list>           
-            
-            <assignment-list title="In completed Component" :assignments="filters.completed" canToggle></assignment-list>           
+            </assignment-list>  
+                     
+            <div v-show="show">
+                <assignment-list @show='show=$event' title="In completed Component" :assignments="filters.completed" canToggle></assignment-list>           
+            </div>
         </section>
 `,
 
   data () {
     return {
       assignments: [],
+      show: true,
     }
   },
   created () {
