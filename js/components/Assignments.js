@@ -7,12 +7,13 @@ export default {
     AssignmentCreate
   },
   template: `
-        <section class="space-y-6">
-            <assignment-list title="In Progress Component" :assignments="filters.inProgress"></assignment-list>           
+        <section class="flex gap-8">
+            <assignment-list title="In Progress Component" :assignments="filters.inProgress">
+                <assignment-create @add="add"></assignment-create>  
+            </assignment-list>           
+            
             <assignment-list title="In completed Component" :assignments="filters.completed"></assignment-list>           
         </section>
-        
-        <assignment-create @add="add"></assignment-create>
 `,
 
   data () {

@@ -3,7 +3,7 @@ import AssignmentTags from './AssignmentTags.js'
 
 export default {
   template: `
-             <section v-show="assignments.length">
+             <section v-show="assignments.length" class="w-60">
                 <h2 class="font-bold">
                 {{ title }}
                 ({{ assignments.length }})
@@ -17,6 +17,8 @@ export default {
                 <ul class="border border-gray-600 divide-y divide-gray-600 mt-3">
                     <assignment :key="assignment.id" v-for="assignment in filteredAssignments" :assignment="assignment"></assignment>
                 </ul>
+                
+                <slot></slot>
             </section>
   `,
 
